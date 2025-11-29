@@ -1,0 +1,185 @@
+
+{
+  "categories": [
+    { "id": "cat_01", "name": "Grains", "subcategories": ["Rice", "Beans", "Maize", "Sorghum"] },
+    { "id": "cat_02", "name": "Vegetables", "subcategories": ["Leafy Greens", "Peppers", "Onions", "Tomatoes"] },
+    { "id": "cat_03", "name": "Fruits", "subcategories": ["Plantain", "Banana", "Citrus", "Berries"] },
+    { "id": "cat_04", "name": "Tubers", "subcategories": ["Yam", "Cassava", "Potato"] },
+    { "id": "cat_05", "name": "Oils", "subcategories": ["Palm Oil", "Groundnut Oil"] }
+  ],
+  "users": [
+    { 
+        "id": "usr_buyer_01", "name": "John Doe", "email": "buyer@brandape.com", "password": "password123",
+        "avatarUrl": "/images/users/buyer_01.jpg", "type": 1,
+        "address": { "street": "123 Market St", "city": "Lagos", "country": "Nigeria" },
+        "phone": "+2348012345678", "registeredDate": "2023-01-15", "lastLogin": "2024-07-20", "status": "Active",
+        "kycStatus": "Verified"
+    },
+    { 
+        "id": "usr_vendor_01", "name": "Vendor Inc.", "email": "vendor@brandape.com", "password": "password123",
+        "avatarUrl": "/images/users/vendor_01.jpg", "type": 2,
+        "address": { "street": "456 Industrial Ave", "city": "Kano", "country": "Nigeria" },
+        "phone": "+2348087654321", "registeredDate": "2023-02-20", "lastLogin": "2024-07-21", "status": "Active",
+        "kycStatus": "Verified"
+    },
+    { 
+        "id": "usr_support_01", "name": "Sam Agent", "email": "support@brandape.com", "password": "password123",
+        "avatarUrl": "/images/users/support_01.jpg", "type": 3,
+        "address": { "street": "789 Help Rd", "city": "Abuja", "country": "Nigeria" },
+        "phone": "+2348098765432", "registeredDate": "2023-03-10", "lastLogin": "2024-07-21", "status": "Active",
+        "kycStatus": "Not Submitted"
+    },
+    { 
+        "id": "usr_admin_01", "name": "Admin User", "email": "admin@brandape.com", "password": "password123",
+        "avatarUrl": "/images/users/admin_01.jpg", "type": 4,
+        "address": { "street": "1 Admin Tower", "city": "Abuja", "country": "Nigeria" },
+        "phone": "+2348011223344", "registeredDate": "2023-01-01", "lastLogin": "2024-07-21", "status": "Active",
+        "kycStatus": "Not Submitted"
+    },
+    { 
+        "id": "usr_buyer_02", "name": "Jane Smith", "email": "jane@example.com", "password": "password123",
+        "avatarUrl": "/images/users/buyer_02.jpg", "type": 1,
+        "address": { "street": "22B Baker Street", "city": "Ibadan", "country": "Nigeria" },
+        "phone": "+2348055556677", "registeredDate": "2023-05-18", "lastLogin": "2024-07-19", "status": "Active",
+        "kycStatus": "Pending"
+    },
+     { 
+        "id": "usr_vendor_02", "name": "Agro Supplies", "email": "agro@brandape.com", "password": "password123",
+        "avatarUrl": "/images/users/vendor_02.jpg", "type": 2,
+        "address": { "street": "Farm Road", "city": "Oyo", "country": "Nigeria" },
+        "phone": "+2348011112222", "registeredDate": "2024-06-10", "lastLogin": "2024-07-20", "status": "Active",
+        "kycStatus": "Rejected", "kycRejectionReason": "ID document was blurry. Please re-upload a clearer copy."
+    }
+  ],
+  "reviews": [],
+  "products": [
+    { "id": "PROD001", "vendorId": "usr_vendor_01", "name": "Sacks of assorted grains", "imageUrl": "/images/products/grains.jpg", "images": ["/images/products/grains.jpg", "/images/products/grains_2.jpg"], "price": 18000, "stock": 150, "category": "Grains", "subcategory": "Maize", "sales": 120, "status": "Active", "description": "A variety of high-quality grains, including millet, sorghum, and maize. Perfect for all culinary needs and sourced from the best farms in Northern Nigeria.", "rating": 4.8, "reviewCount": 1, "reviews": [ { "id": "rev001", "productId": "PROD001", "userId": "usr_buyer_01", "userName": "John Doe", "avatarUrl": "/images/users/buyer_01.jpg", "rating": 5, "comment": "Excellent quality, exactly as described. Fast shipping too!", "date": "2024-07-10" } ], "specs": [{"key": "Weight", "value": "50kg"}, {"key": "Origin", "value": "Kano State"}]},
+    { "id": "PROD002", "vendorId": "usr_vendor_01", "name": "Freshly harvested corn", "imageUrl": "/images/products/corn.jpg", "images": ["/images/products/corn.jpg"], "price": 12500, "stock": 300, "category": "Vegetables", "sales": 250, "status": "Active", "description": "Sweet and juicy corn, harvested at peak freshness. Ideal for roasting, boiling, or making pap.", "rating": 4.5, "reviewCount": 2, "reviews": [ { "id": "rev002", "productId": "PROD002", "userId": "usr_buyer_02", "userName": "Jane Smith", "avatarUrl": "/images/users/buyer_02.jpg", "rating": 4, "comment": "Very good product, but the packaging could be better.", "date": "2024-07-11" }, { "id": "rev003", "productId": "PROD002", "userId": "usr_buyer_01", "userName": "John Doe", "avatarUrl": "/images/users/buyer_01.jpg", "rating": 5, "comment": "I buy this all the time, always fresh!", "date": "2024-06-25" } ], "specs": [{"key": "Type", "value": "Sweet Corn"}, {"key": "Quantity", "value": "50 cobs per sack"}]},
+    { "id": "PROD003", "vendorId": "usr_vendor_01", "name": "Large bunch of green plantains", "imageUrl": "/images/products/plantains.jpg", "images": [], "price": 8000, "stock": 50, "category": "Fruits", "subcategory": "Plantain", "sales": 45, "status": "Inactive", "description": "Versatile green plantains, great for frying into dodo or boiling. A staple in West African cuisine.", "rating": 4.2, "reviewCount": 1, "reviews": [ { "id": "rev004", "productId": "PROD003", "userId": "usr_buyer_02", "userName": "Jane Smith", "avatarUrl": "/images/users/buyer_02.jpg", "rating": 3, "comment": "The plantains were a bit smaller than expected.", "date": "2024-07-15" } ], "specs": [{"key": "Origin", "value": "Ogun State"}]},
+    { "id": "PROD004", "vendorId": "usr_vendor_01", "name": "Organic carrots from the farm", "imageUrl": "/images/products/carrots.jpg", "images": [], "price": 10000, "stock": 200, "category": "Vegetables", "sales": 180, "status": "Active", "description": "Crisp and sweet organic carrots, packed with vitamins. No pesticides used.", "rating": 4.9, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "10kg bag"}]},
+    { "id": "PROD005", "vendorId": "usr_vendor_01", "name": "Dried beans in a woven basket", "imageUrl": "/images/products/beans.jpg", "images": [], "price": 22000, "stock": 0, "category": "Grains", "subcategory": "Beans", "sales": 95, "status": "Active", "description": "Nutritious dried beans (Oloyin), a staple for any healthy diet. Known for its unique sweet taste.", "rating": 4.7, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "25kg"}, {"key": "Type", "value": "Honey Beans (Oloyin)"}]},
+    { "id": "PROD006", "vendorId": "usr_vendor_02", "name": "Fresh Tomatoes Crate", "imageUrl": "/images/products/tomatoes.jpg", "images": [], "price": 15000, "stock": 120, "category": "Vegetables", "subcategory": "Tomatoes", "sales": 88, "status": "Active", "description": "Ripe and juicy tomatoes, perfect for stews, sauces, and salads. Sourced from Jos.", "rating": 4.6, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "25kg Crate"}, {"key": "Origin", "value": "Plateau State"}]},
+    { "id": "PROD007", "vendorId": "usr_vendor_02", "name": "Bag of Onions", "imageUrl": "/images/products/onions.jpg", "images": [], "price": 9000, "stock": 250, "category": "Vegetables", "subcategory": "Onions", "sales": 210, "status": "Active", "description": "A large bag of fresh red onions, essential for adding flavor to any dish.", "rating": 4.8, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "20kg Bag"}]},
+    { "id": "PROD008", "vendorId": "usr_vendor_02", "name": "Yams", "imageUrl": "/images/products/yams.jpg", "images": [], "price": 7500, "stock": 80, "category": "Tubers", "subcategory": "Yam", "sales": 60, "status": "Active", "description": "High-quality yams, perfect for pounding, boiling, or frying. A versatile energy source.", "rating": 4.5, "reviewCount": 0, "reviews": [], "specs": [{"key": "Quantity", "value": "5 Tubers"}]},
+    { "id": "PROD009", "vendorId": "usr_vendor_01", "name": "Fresh Peppers", "imageUrl": "/images/products/peppers.jpg", "images": [], "price": 5000, "stock": 150, "category": "Vegetables", "subcategory": "Peppers", "sales": 130, "status": "Active", "description": "A basket of mixed fresh peppers, including bell peppers and scotch bonnet for that extra kick.", "rating": 4.7, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "5kg basket"}]},
+    { "id": "PROD010", "vendorId": "usr_vendor_02", "name": "Palm Oil Keg", "imageUrl": "/images/products/palm_oil.jpg", "images": [], "price": 25000, "stock": 40, "category": "Oils", "subcategory": "Palm Oil", "sales": 35, "status": "Active", "description": "Authentic, unadulterated red palm oil. Perfect for traditional Nigerian dishes.", "rating": 4.9, "reviewCount": 0, "reviews": [], "specs": [{"key": "Volume", "value": "25 Litres"}]}
+  ],
+  "orders": [
+    { "id": "ORD552", "date": "2023-10-27", "customer": "John Doe", "customerId": "usr_buyer_01", "total": 30500, "status": "Shipped", "items": [ { "id": "PROD001", "vendorId": "usr_vendor_01", "name": "Sacks of assorted grains", "imageUrl": "/images/products/grains.jpg", "images": ["/images/products/grains.jpg", "/images/products/grains_2.jpg"], "price": 18000, "stock": 150, "category": "Grains", "subcategory": "Maize", "sales": 120, "status": "Active", "description": "A variety of high-quality grains, including millet, sorghum, and maize. Perfect for all culinary needs and sourced from the best farms in Northern Nigeria.", "rating": 4.8, "reviewCount": 1, "reviews": [ { "id": "rev001", "productId": "PROD001", "userId": "usr_buyer_01", "userName": "John Doe", "avatarUrl": "/images/users/buyer_01.jpg", "rating": 5, "comment": "Excellent quality, exactly as described. Fast shipping too!", "date": "2024-07-10" } ], "specs": [{"key": "Weight", "value": "50kg"}, {"key": "Origin", "value": "Kano State"}]}, { "id": "PROD002", "vendorId": "usr_vendor_01", "name": "Freshly harvested corn", "imageUrl": "/images/products/corn.jpg", "images": ["/images/products/corn.jpg"], "price": 12500, "stock": 300, "category": "Vegetables", "sales": 250, "status": "Active", "description": "Sweet and juicy corn, harvested at peak freshness. Ideal for roasting, boiling, or making pap.", "rating": 4.5, "reviewCount": 2, "reviews": [ { "id": "rev002", "productId": "PROD002", "userId": "usr_buyer_02", "userName": "Jane Smith", "avatarUrl": "/images/users/buyer_02.jpg", "rating": 4, "comment": "Very good product, but the packaging could be better.", "date": "2024-07-11" }, { "id": "rev003", "productId": "PROD002", "userId": "usr_buyer_01", "userName": "John Doe", "avatarUrl": "/images/users/buyer_01.jpg", "rating": 5, "comment": "I buy this all the time, always fresh!", "date": "2024-06-25" } ], "specs": [{"key": "Type", "value": "Sweet Corn"}, {"key": "Quantity", "value": "50 cobs per sack"}]} ], "shippingAddress": { "street": "123 Market St", "city": "Lagos", "country": "Nigeria" }, "paymentMethod": "Card **** 1234", "trackingNumber": "AWB123456789", "usedEscrow": true, "trackingHistory": [ { "status": "Order Placed", "date": "2023-10-27 10:00 AM", "location": "Online Store" }, { "status": "Payment in Escrow", "date": "2023-10-27 10:01 AM" }, { "status": "Shipped", "date": "2023-10-28 09:00 AM", "location": "Kano Logistics Hub" } ]},
+    { "id": "ORD553", "date": "2023-10-27", "customer": "Jane Smith", "customerId": "usr_buyer_02", "total": 18000, "status": "Completed", "items": [{"id": "PROD001", "vendorId": "usr_vendor_01", "name": "Sacks of assorted grains", "imageUrl": "/images/products/grains.jpg", "images": ["/images/products/grains.jpg", "/images/products/grains_2.jpg"], "price": 18000, "stock": 150, "category": "Grains", "subcategory": "Maize", "sales": 120, "status": "Active", "description": "A variety of high-quality grains, including millet, sorghum, and maize. Perfect for all culinary needs and sourced from the best farms in Northern Nigeria.", "rating": 4.8, "reviewCount": 1, "reviews": [ { "id": "rev001", "productId": "PROD001", "userId": "usr_buyer_01", "userName": "John Doe", "avatarUrl": "/images/users/buyer_01.jpg", "rating": 5, "comment": "Excellent quality, exactly as described. Fast shipping too!", "date": "2024-07-10" } ], "specs": [{"key": "Weight", "value": "50kg"}, {"key": "Origin", "value": "Kano State"}]}], "shippingAddress": { "street": "22B Baker Street", "city": "Ibadan", "country": "Nigeria" }, "paymentMethod": "Card **** 5678", "usedEscrow": true, "trackingHistory": [ { "status": "Order Placed", "date": "2023-10-27 11:00 AM", "location": "Online Store" }, { "status": "Payment in Escrow", "date": "2023-10-27 11:01 AM" }, { "status": "Shipped", "date": "2023-10-28 10:00 AM", "location": "Kano Logistics Hub" }, { "status": "Delivered", "date": "2023-10-29 02:00 PM", "location": "Ibadan, Customer Address" }, { "status": "Completed", "date": "2023-10-29 02:05 PM" } ]},
+    { "id": "ORD554", "date": "2023-10-26", "customer": "Bob Johnson", "customerId": "usr_buyer_03", "total": 10000, "status": "Payment in Escrow", "items": [{"id": "PROD004", "vendorId": "usr_vendor_01", "name": "Organic carrots from the farm", "imageUrl": "/images/products/carrots.jpg", "images": [], "price": 10000, "stock": 200, "category": "Vegetables", "sales": 180, "status": "Active", "description": "Crisp and sweet organic carrots, packed with vitamins. No pesticides used.", "rating": 4.9, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "10kg bag"}]}], "shippingAddress": { "street": "10 Tech Road", "city": "Port Harcourt", "country": "Nigeria"}, "paymentMethod": "Bank Transfer", "usedEscrow": true, "trackingHistory": [ { "status": "Order Placed", "date": "2023-10-26 08:00 AM", "location": "Online Store" }, { "status": "Payment in Escrow", "date": "2023-10-26 08:01 AM" } ]},
+    { "id": "ORD555", "date": "2023-10-25", "customer": "Alice Williams", "customerId": "usr_buyer_04", "total": 40500, "status": "Delivered", "items": [{ "id": "PROD002", "vendorId": "usr_vendor_01", "name": "Freshly harvested corn", "imageUrl": "/images/products/corn.jpg", "images": ["/images/products/corn.jpg"], "price": 12500, "stock": 300, "category": "Vegetables", "sales": 250, "status": "Active", "description": "Sweet and juicy corn, harvested at peak freshness. Ideal for roasting, boiling, or making pap.", "rating": 4.5, "reviewCount": 2, "reviews": [ { "id": "rev002", "userId": "usr_buyer_02", "userName": "Jane Smith", "avatarUrl": "/images/users/buyer_02.jpg", "rating": 4, "comment": "Very good product, but the packaging could be better.", "date": "2024-07-11" }, { "id": "rev003", "userId": "usr_buyer_01", "userName": "John Doe", "avatarUrl": "/images/users/buyer_01.jpg", "rating": 5, "comment": "I buy this all the time, always fresh!", "date": "2024-06-25" } ], "specs": [{"key": "Type", "value": "Sweet Corn"}, {"key": "Quantity", "value": "50 cobs per sack"}]}, {"id":"PROD003", "vendorId": "usr_vendor_01", "name": "Large bunch of green plantains", "imageUrl": "/images/products/plantains.jpg", "images": [], "price": 8000, "stock": 50, "category": "Fruits", "subcategory": "Plantain", "sales": 45, "status": "Inactive", "description": "Versatile green plantains, great for frying into dodo or boiling. A staple in West African cuisine.", "rating": 4.2, "reviewCount": 1, "reviews": [ { "id": "rev004", "userId": "usr_buyer_02", "userName": "Jane Smith", "avatarUrl": "/images/users/buyer_02.jpg", "rating": 3, "comment": "The plantains were a bit smaller than expected.", "date": "2024-07-15" } ], "specs": [{"key": "Origin", "value": "Ogun State"}]}, {"id":"PROD005", "vendorId": "usr_vendor_01", "name": "Dried beans in a woven basket", "imageUrl": "/images/products/beans.jpg", "images": [], "price": 22000, "stock": 0, "category": "Grains", "subcategory": "Beans", "sales": 95, "status": "Active", "description": "Nutritious dried beans (Oloyin), a staple for any healthy diet. Known for its unique sweet taste.", "rating": 4.7, "reviewCount": 0, "reviews": [], "specs": [{"key": "Weight", "value": "25kg"}, {"key": "Type", "value": "Honey Beans (Oloyin)"}]}], "shippingAddress": { "street": "5th Avenue", "city": "Abuja", "country": "Nigeria"}, "paymentMethod": "Card **** 4321", "usedEscrow": false, "trackingHistory": [ { "status": "Order Placed", "date": "2023-10-25 01:00 PM", "location": "Online Store" }, { "status": "Pending", "date": "2023-10-25 01:01 PM"}, { "status": "Shipped", "date": "2023-10-26 11:00 AM", "location": "Kano Logistics Hub" }, { "status": "Delivered", "date": "2023-10-27 03:00 PM", "location": "Abuja, Customer Address" } ]},
+    { "id": "ORD556", "date": "2023-10-25", "customer": "John Doe", "customerId": "usr_buyer_01", "total": 8000, "status": "Cancelled", "items": [{"id": "PROD003", "vendorId": "usr_vendor_01", "name": "Large bunch of green plantains", "imageUrl": "/images/products/plantains.jpg", "images": [], "price": 8000, "stock": 50, "category": "Fruits", "subcategory": "Plantain", "sales": 45, "status": "Inactive", "description": "Versatile green plantains, great for frying into dodo or boiling. A staple in West African cuisine.", "rating": 4.2, "reviewCount": 1, "reviews": [ { "id": "rev004", "userId": "usr_buyer_02", "userName": "Jane Smith", "avatarUrl": "/images/users/buyer_02.jpg", "rating": 3, "comment": "The plantains were a bit smaller than expected.", "date": "2024-07-15" } ], "specs": [{"key": "Origin", "value": "Ogun State"}]}], "shippingAddress": { "street": "123 Market St", "city": "Lagos", "country": "Nigeria" }, "paymentMethod": "Card **** 1234", "usedEscrow": true, "trackingHistory": [ { "status": "Order Placed", "date": "2023-10-25 04:00 PM", "location": "Online Store" }, { "status": "Payment in Escrow", "date": "2023-10-25 04:01 PM" }, { "status": "Cancelled", "date": "2023-10-25 05:00 PM" } ]}
+  ],
+  "disputes": [
+    { "id": "DISP001", "orderId": "ORD552", "buyer": "John Doe", "vendor": "Vendor Inc.", "reason": "Item not as described", "status": "Open", "date": "2023-10-28", "messages": [ { "user": "John Doe", "text": "The grains I received are not the assorted variety as described. It's only one type.", "timestamp": "2023-10-28 10:00 AM" }, { "user": "Vendor Inc.", "text": "We apologize for the mix-up. Can you please provide a photo?", "timestamp": "2023-10-28 10:05 AM" }, { "user": "Sam Agent", "text": "Support has been notified. @Vendor Inc., please address the customer's concern.", "timestamp": "2023-10-28 10:10 AM" } ], "resolution": null }
+  ],
+  "notifications": [
+    { "id": "notif001", "userId": "usr_vendor_01", "type": "order", "message": "New order #ORD554 received from Bob Johnson.", "date": "2023-10-26", "read": false, "link": "/vendor/orders/detail" },
+    { "id": "notif002", "userId": "usr_buyer_01", "type": "order", "message": "Your order #ORD552 has been shipped.", "date": "2023-10-27", "read": false, "link": "/buyer/orders/detail" }
+  ],
+  "transactions": [
+    { "id": "trn001", "date": "2023-10-28", "type": "Escrow Release", "amount": 18000, "status": "Completed", "description": "Sale from order #ORD553"},
+    { "id": "trn002", "date": "2023-10-28", "type": "Fee", "amount": -1800, "status": "Completed", "description": "Platform fee for order #ORD553"}
+  ],
+  "kycFields": {
+    "id": 1,
+    "fields": [
+        { "id": "field1", "label": "Government-Issued ID", "type": "file", "required": true, "allowedFormats": [".jpg", ".png", ".pdf"], "maxSize": 5 },
+        { "id": "field2", "label": "Proof of Address", "type": "file", "required": true, "allowedFormats": [".jpg", ".png", ".pdf"], "maxSize": 2 }
+    ]
+  },
+  "homepageContent": {
+    "id": 1,
+    "marquee": {
+        "enabled": true,
+        "items": [
+            "Global Shipping Available",
+            "Secure Escrow Payments",
+            "100% Organic Products",
+            "Verified Vendors",
+            "Best Market Prices"
+        ]
+    },
+    "hero": {
+        "enabled": true,
+        "mode": "slider",
+        "autoplay": true,
+        "interval": 5000,
+        "slides": [
+            {
+                "title": "Global Food Trading That Works",
+                "subtitle": "Finely processed farm produce, safe guaranteed with secured unwavering promises.",
+                "imageUrl": "/images/ui/hero-bg.jpg"
+            },
+            {
+                "title": "Quality You Can Trust",
+                "subtitle": "Direct from the farm to your table, handled with care.",
+                "imageUrl": "/images/ui/delivery-bg.jpg"
+            }
+        ]
+    },
+    "promo": {
+        "enabled": true,
+        "text": "37% OFF",
+        "imageUrl": "/images/ui/sale-bg.jpg"
+    },
+    "features": {
+        "enabled": true,
+        "items": [
+            { "icon": "FastShippingIcon", "title": "Fast Shipping", "description": "Free shipping on all your order" },
+            { "icon": "CustomerSupportIcon", "title": "Customer Support 24/7", "description": "Instant access to support" },
+            { "icon": "SecurePaymentIcon", "title": "100% Secure Payment", "description": "We ensure your money is safe" },
+            { "icon": "MoneyBackIcon", "title": "Money-Back Guarantee", "description": "30 days money-back guarantee" }
+        ]
+    },
+    "deliverySection": {
+      "enabled": true,
+      "title": "We Delivered Your Order.",
+      "description": "Ut suscipit agentibus susequit, Sed pondera pellentesque nunc, pretium suspendisse enim, tellus vitae. Sed non tincidunt sem, quis porttitor lorem. Maecenas commodo quam in tellus tempus, quis elementum.",
+      "subDescription": "Maecenas ut nunc fringilla eros varius.",
+      "buttonText": "Shop Now",
+      "imageUrl": "/images/ui/delivery-bg.jpg"
+    },
+    "branding": {
+        "logoDark": "",
+        "logoLight": "",
+        "favicon": ""
+    }
+  },
+  "promotions": [
+    { "id": "promo_1", "code": "SAVE10", "type": "percentage", "value": 10, "expiryDate": "2024-12-31", "usageCount": 15, "status": "Active", "applicableCategories": ["Grains", "Vegetables"] }
+  ],
+  "emailSettings": {
+    "host": "smtp.brandape.com",
+    "port": "587",
+    "username": "no-reply@brandape.com",
+    "password": "password123",
+    "encryption": "tls",
+    "senderName": "BrandApe Support",
+    "senderEmail": "support@brandape.com"
+  },
+  "emailLogs": [
+    { "id": "email_1", "date": "2023-10-27 10:00 AM", "recipientGroup": "John Doe", "subject": "Order Confirmation #ORD552", "status": "Sent" }
+  ],
+  "chatSessions": [
+    {
+      "id": "chat_001",
+      "userId": "usr_buyer_01",
+      "userName": "John Doe",
+      "userType": 1,
+      "status": "Closed",
+      "lastMessage": "Thanks for your help!",
+      "lastMessageDate": "2023-10-28 14:00:00",
+      "unreadCount": 0,
+      "messages": [
+        { "id": "msg_1", "senderId": "usr_buyer_01", "senderName": "John Doe", "text": "Hi, I have a question about shipping.", "timestamp": "2023-10-28 13:50:00", "isAdmin": false },
+        { "id": "msg_2", "senderId": "agent_1", "senderName": "Support Agent", "text": "Hello John! Sure, what would you like to know?", "timestamp": "2023-10-28 13:51:00", "isAdmin": true },
+        { "id": "msg_3", "senderId": "usr_buyer_01", "senderName": "John Doe", "text": "Thanks for your help!", "timestamp": "2023-10-28 14:00:00", "isAdmin": false }
+      ]
+    }
+  ],
+  "campaignGroups": [
+      { "id": "grp_1", "name": "High Value Buyers", "userIds": ["usr_buyer_01", "usr_buyer_02"], "description": "Buyers with over 1M spent" }
+  ]
+}
